@@ -155,9 +155,9 @@ for(let i = 1; i < 5; i++){
 }
     
 
-for(let i = 11; i < 20; i++){
-    console.log(i);    
-}
+//for(let i = 11; i < 15; i++){
+//   console.log(i);    
+//}
 
 
 
