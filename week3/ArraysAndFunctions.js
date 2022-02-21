@@ -136,3 +136,18 @@ var var1 = "blue";
 function isBlue(var1){
     return var1.toLowerCase() === "blue";
 }
+
+
+
+
+
+
+
+//Write a function called printArray that accepts an array as an argument. 
+//Create a loop that will print each value of the passed in array.
+
+function printArray(array){
+    for(let i=0; i < array.length; i++){
+        console.log(array[i])
+    }
+}
