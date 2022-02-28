@@ -147,3 +147,39 @@ function myFunction(num1, num2){
 
 //my answer 
 let xor = (num1, num2)=> num1^ num2;
+
+// function creatFullName(firstName, lastName){
+//     return firstName+ ' ' + lastName;
+
+
+// }
+
+// const creatFullName =( firstName, lastName ) => `${firstName} ${lastName}`;
+
+
+function doubleNumber(number) {
+    return number *2;
+}
+
+const doubleNumber = number => number *2;
+
+
+
+function getEvenNumbers (array){
+    let evenNubmers = [];
+    for (let i of array ) {
+        if ( i % 2 ===0){
+            evenNubmers.push(i);
+        }
+    }    
+}
+
+const getEvenNumbers = (array) =>{
+    let evenNubmers = [];
+    for (let i of array ) {
+        if ( i % 2 ===0){
+            evenNubmers.push(i);
+        }
+    }    
+    return evenNumbers;
+}

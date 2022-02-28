@@ -222,33 +222,33 @@
  
 
 
-var i = 0;
-do{
-    if(i % 3 === 0){
-    console.log
-    }
-    i++
-}
-while (i <= 99)
+// var i = 0;
+// do{
+//     if(i % 3 === 0){
+//     console.log
+//     }
+//     i++
+// }
+// while (i <= 99)
 
 
 
 
 //write your code here
-for(var i = 1; i<=input; i++){
-    console.log("The bowl contains "+i+" cups of rice.");
-}
-console.log("We have enough rice!");
+// for(var i = 1; i<=input; i++){
+//     console.log("The bowl contains "+i+" cups of rice.");
+// }
+// console.log("We have enough rice!");
 
 
 
 
 //This is just one example using a while loop
 
-while(currentCupsOfRice != requiredCupsOfRice){
-    console.log('The bowl contains ' + (++currentCupsOfRice) + ' cups of rice.');
-}
-console.log('We have enough rice!');
+// while(currentCupsOfRice != requiredCupsOfRice){
+//     console.log('The bowl contains ' + (++currentCupsOfRice) + ' cups of rice.');
+// }
+// console.log('We have enough rice!');
 
 
 
@@ -262,13 +262,13 @@ console.log('We have enough rice!');
 //If not, print "Your number was not between 1 and 100."
 
 //write your code here
-var counter = userNumber;
-if ( userNumber <= 100 && userNumber >= 1 ) {
-    while ( counter <= 100 ) {
-        console.log(counter++);
-    }
-} else {
-    console.log("Your number was not between 1 and 100.");
+// var counter = userNumber;
+// if ( userNumber <= 100 && userNumber >= 1 ) {
+//     while ( counter <= 100 ) {
+//         console.log(counter++);
+//     }
+// } else {
+//     console.log("Your number was not between 1 and 100.");
 
 
 
@@ -282,7 +282,7 @@ if ( userNumber <= 100 && userNumber >= 1 ) {
     //  "We have lift off!". If a number is less than 3 or greater than 10, then the 
     //  only message printed to the console is "We have lift off!"
 
-
+let countDown = 6;
     if (countDown <= 10 && countDown >= 3){
         while(countDown >= 1){
             console.log(countDown-- + '...')
@@ -290,7 +290,60 @@ if ( userNumber <= 100 && userNumber >= 1 ) {
     
     }
     console.log("We have lift off!");
+
+
+for (let i=50; i<=40; i--){
+    console.log(i);
+}
+
+//while loop used for same as above.
+let int=50;
+while(int>=40){
+    console.log(int);
+    int--;
+}
+
+
+let password = 'lol';
+let guess = prompt('Enter the password');
+while(guess !== password){
+    console.log('PLEASE TRY AGAIN')
+    guess = prompt('Enter the password');
+
+}
+console.log('You got it correct!');
+
+const purchases = [19.99, 9.5, 4.25, 28.75, 86.20, 1.99, 104.50, 2.85];
+let total = 0;
+for (let i=0; i < purchases.length; i++){
+    total += purchases[i];
+    console.log(purchases[i]);
+}
+console.log('Total is ', + total);
+
+//same code using 'for of'
+for (let priceCost of purchases){
+    console.log(priceCost);
+}
+console.log('Total is ', + total);
+
+
+
+//just a easy way to print
+
+for (let char of 'ytfugiuh12364y5th'){
+    console.log(char);
 }
 
 
 
+
+//more functions
+function laughLoud (){
+    console.log('haha')
+    console.log('hehe')
+    console.log('haha')
+
+}
+//this will 'call'function
+laughLoud();
