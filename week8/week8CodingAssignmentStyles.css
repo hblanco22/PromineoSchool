@@ -58,3 +58,7 @@ tr:hover{
 img {
     height: 150px;
 }
+
+p{
+    font: shadow-text
+}
