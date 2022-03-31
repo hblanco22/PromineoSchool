@@ -1,0 +1,25 @@
+
+body{
+    background-color:blue
+}
+p#text-2{
+    color:red
+}
+
+div.box {
+    margin: 20%;
+  
+    border: 1px solid black;
+    border-radius: 25px;
+
+}
+
+li:hover{
+    background-color: white;
+}
+
+
+table
+tr:nth-child(3n){
+    background-color: gray;
+}
