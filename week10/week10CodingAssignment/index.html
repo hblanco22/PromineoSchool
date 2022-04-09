@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <title>Week 10 Coding Assignment</title>
+</head>
+<body class="container">
+
+
+    <div class="card">
+        <br>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="new-make-name">Make</label>
+                        <input type="text" class="form-control" id="new-make-name">
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="new-model-name">Model</label>
+                        <input type="text" class="form-control" id="new-model-name">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="new-comment">Comment</label>
+                        <input type="text" class="form-control" id="new-comment" placeholder="Comment">
+                    </div>                    
+                </div>               
+            </div>
+            <div>
+                <button id="add" class="btn btn-primary form control">Create</button>
+            </div>
+        </div>
+    </div>
+
+    <table id="list" class="table table-dark table-striped">
+        <tr>
+            <th>Comment</th>
+            <th>Date Created</th>
+            <th>Make</th>
+            <th>Model</th>            
+        </tr>
+    </table>
+
+<script src="index.js"></script>
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+</body>
+</html>
