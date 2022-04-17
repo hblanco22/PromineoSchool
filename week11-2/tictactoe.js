@@ -1,14 +1,14 @@
 const PLAYER_X_CLASS = 'x'
 const PLAYER_O_CLASS = 'circle'
 const WINNING_COMBINATIONS = [
-    [0, 4, 8],
-    [2, 4, 6],
-    [0, 1, 2],
-    [3, 4, 5],
-    [6, 7, 8],
-    [0, 3, 6],
-    [1, 4, 7],
-    [2, 5, 8]
+	[0, 1, 2],
+	[3, 4, 5],
+	[6, 7, 8],
+	[0, 3, 6],
+	[1, 4, 7],
+	[2, 5, 8],
+	[0, 4, 8],
+	[2, 4, 6]
 ]
 
 const cellElements = document.querySelectorAll('[data-cell]')
@@ -17,7 +17,6 @@ const winningMessageElement = document.getElementById('winningMessage')
 const restartButton = document.getElementById('restartButton')
 const winningMessageTextElement = document.getElementById('winningMessageText')
 let isPlayer_O_Turn = false
-
 
 startGame()
 
@@ -50,15 +49,13 @@ function handleCellClick(e) {
 }
 
 function endGame(draw) {
-    if (draw) {
-        winningMessageTextElement.innerText = "DRAW! No winner, play again?"
-    } else {
-        winningMessageTextElement.innerText = `Player with ${isPlayer_O_Turn ? "O's" : "X's"} wins!`
-    }
-    winningMessageElement.classList.add('show')
+	if (draw) {
+		winningMessageTextElement.innerText = "It's a draw!"
+	} else {
+		winningMessageTextElement.innerText = `Player with ${isPlayer_O_Turn ? "O's" : "X's"} wins!`
+	}
+	winningMessageElement.classList.add('show')
 }
-
-
 
 function isDraw() {
 	return [...cellElements].every(cell => {
@@ -91,4 +88,3 @@ function checkWin(currentClass) {
 		})
 	})
 }
-
