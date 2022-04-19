@@ -1,0 +1,17 @@
+{
+  "name": "house_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "boot": "^0.8.2",
+    "bootstrap": "^5.1.3",
+    "jquery": "^3.6.0",
+    "strap": "^0.1.0"
+  }
+}
