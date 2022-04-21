@@ -5,7 +5,7 @@ class House {
     }
 
     addRoom(name, area) {
-        this.rooms.push(new onmousedown(name, area));
+        this.rooms.push(new Room(name, area));
     }
 }
 
@@ -33,7 +33,7 @@ class HouseService {
 
     static updateHouse(house) {
         return $.ajax({
-            url: this.url + `/${house._id}`
+            url: this.url + `/${house._id}`,
             dataType: 'json',
             data: JSON.stringify(house),
             contentType: 'application/json', 
@@ -56,18 +56,59 @@ class DOMManager {
         HouseService.getAllHouses().then(houses => this.render(houses));
     }
 
+    static createHouse(name) {
+        HouseService.createHouse(new House(name))
+        .then(() => {
+            return HouseService.getAllHouses();
+        })
+        .then((houses) => this.render(houses));
+    }
+
+    static deleteHouse(id) {
+        HouseService.deleteHouse(id)
+        .then(() => {
+            return HouseService.getAllHouses();
+        })
+        .then((houses) => this.render(houses));
+}
+
     static render(houses) {
         this.houses = houses;
         $('#app').empty();
-        for (let houses of houses) {
+        for (let house of houses) {
             $('#app').prepend(
                 `<div id="${house._id}" class="card">
-                    <div class="card-headed">
-                        <h2>${houses.name}</h2>
+                    <div class="card-header">
+                        <h2>${house.name}</h2>
+                        <button class="btn btn-danger" onclick="DOMManger.deleteHouse('${house._id}')">Delete</button>
                     </div>
-                </div>
-                `
-            )
+                    <div class="card-body">
+                        <div class="card">
+                            <div class="row">
+                                <div class="col-sm">
+                                    <input type="text" id="${house._id}-room-name" class ="form-control" placeholder="Room Name">
+                                </div>
+                                <div class="col-sm">
+                                    <input type="text" id="${house._id}-room-area" class ="form-control" placeholder="Room Area">
+                                </div>
+                            </div>
+                            <button is ="${house._id}-new-room" onclick="DOMManager.addRoom('${house._id}')" class=btn btn primary form-control">Add</button>
+                        </div>
+                    </div>
+                </div><br>`
+                
+            );
+            for (let room of house.rooms) {
+                $(`#${house._id}`).find('.card-body').append(
+                    `<p>
+                        <span> id="name-${room._id}"><strong>Name: </strong> ${room.name}</span>
+                        <span> id="area-${room._id}"><strong>Name: </strong> ${room.area}</span>
+                    <button class="btn btn-danger" onclick="DOMManager.deleteRoom('${house._id}', '${room._id}')">Delete Room</button>`
+                )
+            }
         }
     }
 }
+
+
+DOMManager.getAllHouses();
