@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 import { House } from './House';
 import { housesApi } from '../rest/HousesApi.js';
 
-export class HousesList extends React.Component {
+export class HouseList extends React.Component {
     state = {
-        houses = []
+        houses: []
     };
 
     componentDidMount() {

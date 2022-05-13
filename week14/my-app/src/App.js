@@ -1,11 +1,11 @@
 import React,  { Component } from "react";
-import { HousesList } from './Components/HousesList';
+import { HouseList } from './Components/HousesList';
 
 class App extends Component {
     render(){
         return (
             <div>
-                <HousesList props = {{test: data}} />
+                <HouseList props={{test: data}} />
             </div>
         )
     }

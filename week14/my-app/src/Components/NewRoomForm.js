@@ -9,16 +9,16 @@ export const NewRoomForm = (props) => {
         setArea(int >= 0 ? int : '');
     }
 
-    const onSubMit = (e) => {
+    function onSubMit(e) {
         e.preventDefault();
         if (name && area) {
-            props.addNewRoom({name, area});
+            props.addNewRoom({ name, area });
             setName('');
             setArea('');
         } else {
             console.log('invalid input');
         }
-    };
+    }
 
     return (
         <div>

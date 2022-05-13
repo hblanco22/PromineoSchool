@@ -29,7 +29,7 @@ export const House = (props) => {
         <div>
             <h1>{house.name}</h1>
             {
-                rooms({rooms, houseID: house._id, deleteRoom})
+                rooms({rooms, houseId: house._id, deleteRoom})
             }
             <NewRoomForm addNewRoom={addNewRoom} />
         </div>
