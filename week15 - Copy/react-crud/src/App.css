@@ -48,7 +48,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #3a8fff;
+  background-color: #050505;
   color: whitesmoke;
   flex-direction: column;
 }
@@ -62,25 +62,3 @@
   font-family: 'Courier New', Courier, monospace;
    font-size: 12px !important;
 }
-
-
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-th {
-  text-align: left;
-  padding: 8px;
-  background-color: rgb(81, 83, 81);
-  
-}
-
-tr:nth-child(even) {
-  background-color: rgb(158, 203, 233);
-}
-
-Table.header {
-  background-color: rgb(81, 83, 81);
-}
-
