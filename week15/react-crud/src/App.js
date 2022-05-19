@@ -7,12 +7,14 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Header from './components/header/header';
 import '../node_modules/bootstrap/dist/css/bootstrap.css'
 
+
 function App() {
   return (
     <Router>
       <Header />
       <div className="main">
-        <h2 className="main-header">Acme Inc. Human Resources Employee Info</h2>
+        <h1 className="bold">Acme Inc. Human Resources Employee Info</h1>
+        <br></br>
         <br></br>
         <div>
 

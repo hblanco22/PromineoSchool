@@ -55,6 +55,7 @@
 
 .main-header{
   font-family: 'Courier New', Courier, monospace;
+  justify-content: left;
 }
 
 .create-form label{
@@ -72,7 +73,7 @@ table {
 th {
   text-align: left;
   padding: 8px;
-  background-color: rgb(81, 83, 81);
+  background-color: rgb(34, 85, 34);
   
 }
 
@@ -81,6 +82,7 @@ tr:nth-child(even) {
 }
 
 Table.header {
-  background-color: rgb(81, 83, 81);
+  background-color: rgb(46, 134, 46);
 }
+
 
