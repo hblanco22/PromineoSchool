@@ -48,13 +48,14 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #050505;
+  background-color: #3a8fff;
   color: whitesmoke;
   flex-direction: column;
 }
 
 .main-header{
   font-family: 'Courier New', Courier, monospace;
+  justify-content: left;
 }
 
 .create-form label{
@@ -62,3 +63,26 @@
   font-family: 'Courier New', Courier, monospace;
    font-size: 12px !important;
 }
+
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  text-align: left;
+  padding: 8px;
+  background-color: rgb(34, 85, 34);
+  
+}
+
+tr:nth-child(even) {
+  background-color: rgb(158, 203, 233);
+}
+
+Table.header {
+  background-color: rgb(46, 134, 46);
+}
+
+
