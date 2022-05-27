@@ -7,7 +7,9 @@ export default function Create() {
     let history = useHistory();
     const [firstName, setFirstName] = useState('');
     const [middleName, setMiddleName] = useState('');
-    const [lastName, setLastName] = useState('');    
+    const [lastName, setLastName] = useState(''); 
+    const [addressOne, setAddressOne] = useState('');
+    const [addressTwo, setAddressTwo] = useState('');   
     const [checkbox, setCheckbox] = useState(false);
     const [checkbox2, setCheckbox2] = useState(false);
     console.log(checkbox)
@@ -16,7 +18,9 @@ export default function Create() {
         axios.post(`https://627e7dde271f386ceff943b2.mockapi.io/resourceData`, {
             firstName,
             middleName,
-            lastName,            
+            lastName, 
+            addressOne,
+            addressTwo,           
             checkbox,
             checkbox2
         }).then(() => {
@@ -39,6 +43,14 @@ export default function Create() {
                 <Form.Field>
                     <label>Last Name</label>
                     <input placeholder='Last Name' onChange={(e) => setLastName(e.target.value)}/>
+                </Form.Field>
+                <Form.Field>
+                    <label>Address</label>
+                    <input placeholder='Address' onChange={(e) => setAddressOne(e.target.value)}/>
+                </Form.Field>
+                <Form.Field>
+                    <label>City, State</label>
+                    <input placeholder='City, State' onChange={(e) => setAddressTwo(e.target.value)}/>
                 </Form.Field>
                 
                 <Form.Field>
